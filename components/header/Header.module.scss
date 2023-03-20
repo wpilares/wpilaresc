@@ -11,6 +11,10 @@
   margin: 0 auto;
 }
 
+.sideNavLinks {
+  display: none;
+}
+
 .menu {
   display: none;
 }
@@ -75,6 +79,29 @@
     display: block;
   }
 
+  .sideNavLinks {
+    color: white;
+    font-family: $poppins;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1550px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 30px;
+
+    div {
+      color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+
+    div:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+  }
+
 }
 
 @media (max-width: $sm) {
@@ -88,15 +115,18 @@
       line-height: 45px;
       font-size: 25px;
     }
-
   }
 
-
+  .sideNavLinks {
+    font-size: 20px;
+  }
 
   .menu {
     height: 30px;
     width: 30px;
   }
+
+
 
 }
 
