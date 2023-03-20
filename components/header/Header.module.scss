@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import './styles/vars';
 
 .header {
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: $poppins;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   max-width: 1550px;
   margin: 0 auto;
+}
 
+.menu {
+  display: none;
 }
 
 .navbarBrand {
-  margin-right: auto;
   font-size: 30px;
   line-height: 35px;
   cursor: pointer;
@@ -26,26 +27,28 @@
     border-radius: 100%;
     width: 55px;
     height: 55px;
-    font-family: 'Permanent Marker', cursive;
+    font-family: $permanent-maker;
     font-weight: 400;
     font-size: 35px;
     text-align: center;
     line-height: 55px;
+    margin-right: 10px;
   }
+}
 
-  span:nth-child(1) {
-    font-weight: 700;
-  }
-  span:nth-child(2) {
-    font-weight: 400;
-  }
+.firstTitle {
+  font-weight: 700;
+}
+
+.secondTitle {
+  font-weight: 400;
 }
 
 .navbarLinks {
   display: flex;
 
   div {
-    margin-right: 1rem;
+    margin-left: 5rem;
     font-weight: 400;
     font-size: 18px;
     line-height: 35px;
@@ -53,5 +56,50 @@
     cursor: pointer;
   }
 
+  div:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
+
+@media (max-width: $md) {
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .navbarLinks {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+}
+
+@media (max-width: $sm) {
+
+  .navbarBrand {
+    font-size: 20px;
+
+    div {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 25px;
+    }
+
+  }
+
+
+
+  .menu {
+    height: 30px;
+    width: 30px;
+  }
+
+}
+
+
+
 
